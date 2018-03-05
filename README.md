@@ -1,6 +1,6 @@
-# useful-regex
+# bundle-loader-easy
 
-react-router && bundle-loader 按需加载方案简化工具
+react-router4.0 && bundle-loader 按需加载方案简化工具
 
 ## 安装
 
@@ -15,14 +15,28 @@ let components = lazyload(array);
 
 ## 案例
 
-let lazyload = require('bundle-loader-easy');
-
+##引入
+```
+let lazyload = require('bundle-loader-easy')
+```
+##懒加载数组
+```
 array = [{
     name: 'A',
     component: require('bundle-loader?lazy!./containers/')
-}];
-
-let components = lazyload(array);
-
-<Route path="/A" component={components.A}/>;
+}]
+or
+array = {
+    name: 'A',
+    component: require('bundle-loader?lazy!./containers/')
+}
+```
+##载入
+```
+let components = lazyload(array)
+```
+##router设置
+```
+<Route path="/A" component={components.A}/>
+```
 

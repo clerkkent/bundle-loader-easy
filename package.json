@@ -1,6 +1,6 @@
 {
   "name": "bundle-loader-easy",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "this is a component to easy lazy load react-component,it's rely on bundle-loader",
   "main": "dist/index.js",
   "scripts": {
